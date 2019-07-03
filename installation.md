@@ -34,7 +34,7 @@ _ = ax.plot(sorted(df['Age']), 'o')
 
 Then execute the cell and this figure should appear:
 
-![scatter plot, image should look like dots curving upward](age.png)
+![scatter plot, image should look like dots curving upward](images/install.png?)
 
 
 
