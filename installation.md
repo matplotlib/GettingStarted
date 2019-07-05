@@ -29,7 +29,7 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv("http://bit.ly/tscv17")
 fig, ax = plt.subplots()
-_ = ax.plot(sorted(df['Age']), 'o')
+_ = ax.plot(np.sort(df['Age']), 'o')
 ```
 
 Then execute the cell and this figure should appear:
