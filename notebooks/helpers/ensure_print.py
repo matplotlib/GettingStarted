@@ -17,15 +17,17 @@ to that output area.
 
 import matplotlib.pyplot as plt
 
+
 def _monkey_patch_pyplot():
+    import matplotlib.pyplot as plt
     import functools
     from IPython.display import display
     import ipywidgets as widgets
     import weakref
-    import functools
+
     @functools.wraps(plt.figure)
     def figure(*args, **kwargs):
-        fig  = figure._figure(*args, **kwargs)
+        fig = figure._figure(*args, **kwargs)
         fig._output = output = widgets.Output()
         display(output)
 
@@ -38,7 +40,9 @@ def _monkey_patch_pyplot():
             try:
                 r = weakref.WeakMethod(cb)
             except TypeError:
-                r = lambda: cb
+                def r():
+                    return cb
+
             def wrapper(*args, **kw):
                 cb = r()
 
@@ -57,6 +61,7 @@ def _monkey_patch_pyplot():
     # monkey patch pyplot (!?)
     plt.figure = figure
     plt._print_hacked = True
+
 
 # make sure we only do this once!
 if getattr(plt, '_print_hacked', False):
