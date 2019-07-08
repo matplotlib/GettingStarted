@@ -2,7 +2,6 @@
 # Scipy 2018 Tutorial
 Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms. Matplotlib can be used in Python scripts, the Python and IPython shells, the Jupyter notebook, web application servers, and four graphical user interface toolkits.
 
-This tutorial aims to unpack some of the fundamental concepts that underlie the architecture of Matplotlib. Using these concepts, attendees will learn how to change the "look and feel" of plots.
 
 
 ## Installation
