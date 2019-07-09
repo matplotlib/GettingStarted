@@ -6,6 +6,7 @@ Matplotlib is a Python 2D plotting library which produces publication quality fi
 
 ## Installation
 Instructions can be found [here](installation.md)
+If the installation doesn't work, try [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/story645/mpl_tutorial/master)
 
 ## Acknowledgements
 
